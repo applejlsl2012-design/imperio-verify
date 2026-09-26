@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: #0b0b12;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #ffffff;
+  padding: 20px;
+}
+
+/* Tarjeta Principal */
+.card {
+  background: #12111a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 35px 25px;
+  width: 100%;
+  max-width: 440px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Línea Neón Superior */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #ff0042, #ff7b00);
+  box-shadow: 0 0 10px #ff0042;
+}
+
+/* Contenedor del Avatar/Logo */
+.avatar-container {
+  margin: 0 auto 20px;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 0, 66, 0.1);
+  border: 2px solid #ff0042;
+  box-shadow: 0 0 20px rgba(255, 0, 66, 0.4);
+  overflow: hidden;
+}
+
+.avatar-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+p.subtitle {
+  font-size: 13.5px;
+  color: #a0a0b0;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+/* Barra de Progreso */
+.progress-bar-bg {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #ff0042, #ff7b00);
+  box-shadow: 0 0 8px #ff0042;
+  transition: width 0.4s ease;
+  border-radius: 10px;
+}
+
+/* Lista de Pasos */
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.step-item {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 14px 18px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 14px;
+  color: #8a8a9e;
+  transition: all 0.3s ease;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #2a2938;
+  border: 2px solid #3d3b52;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+/* Estado Neón Verde cuando un paso se activa */
+.step-item.active {
+  border-color: rgba(0, 255, 149, 0.2);
+  color: #ffffff;
+  background: rgba(0, 255, 149, 0.02);
+}
+
+.step-item.active .dot {
+  background: #00ff95;
+  border-color: #00ff95;
+  box-shadow: 0 0 10px #00ff95;
+}
+
+/* Footer */
+.footer-text {
+  font-size: 11.5px;
+  color: #5c5c70;
+  line-height: 1.6;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  padding-top: 20px;
+}
